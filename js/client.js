@@ -3,7 +3,8 @@ const socket = io('http://localhost:8000');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".scrollable-content");
-var audio = new Audio('ton.mp3');
+var audio = new Audio('ton1.mp3');
+var audio2 = new Audio('sendmessage.mp3');
 
 const append = (message, position) => {
     const messageElement = document.createElement('div');
@@ -13,6 +14,9 @@ const append = (message, position) => {
     messageContainer.append(messageElement);
     if(position == 'left'){
         audio.play();
+    }
+    if(position == 'right'){
+        audio2.play();
     }
 }
 

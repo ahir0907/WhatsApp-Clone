@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require("path");
 const http = require('http');
 const socketIo = require('socket.io');
 
@@ -7,6 +8,13 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 const users = [];
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
+app.engine("ejs", ejsMate);
+app.use(express.static(patj.join(__dirname, "public")));
 
 io.on('connection', (socket) => {
     console.log('A user connected');

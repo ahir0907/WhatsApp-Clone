@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-  "start": "node app.js",
-  "build": "echo 'No build step specified'"
-},
+    "start": "node app.js",
+    "build": "echo 'No build step specified'"
+  },
   "author": "Kalpesh Hadiya",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "nodemon": "^3.1.7",

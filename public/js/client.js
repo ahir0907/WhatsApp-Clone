@@ -1,4 +1,7 @@
-    const socket = io('https://whatsappkalpesh.onrender.com');
+const socket = io('https://whatsappkalpesh.onrender.com', {
+    transports: ['websocket', 'polling']
+});
+
 
 
     const form = document.getElementById('send-container');

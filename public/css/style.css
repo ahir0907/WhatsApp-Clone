@@ -36,7 +36,8 @@ body {
 /* Chat container */
 .container {
     flex-grow: 1;
-    background-color: #e5ddd5;
+    /* background-color: #e5ddd5; */
+    background-image: url("/download.jpeg");
     display: flex;
     flex-direction: column;
     padding: 15px;
